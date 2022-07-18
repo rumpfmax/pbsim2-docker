@@ -6,6 +6,6 @@ RUN apt-get install git -y
 RUN apt-get install make -y
 RUN apt-get install g++ -y
 RUN apt-get install python3 -y
-ADD ./pbsim2 /pbsim2-install
-RUN cd /pbsim2-install && ./configure && make && make install
+ADD ./pbsim2 pbsim2
+RUN cd pbsim2 && ./configure && make && make install
 CMD bash
